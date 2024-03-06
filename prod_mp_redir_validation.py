@@ -5,8 +5,13 @@ from concurrent.futures import ThreadPoolExecutor
 import time
 import warnings
 
-print("Waiting for 15 seconds for EKV to reach eventual consistency. Please be patient.")
-time.sleep(15)
+print("Waiting for 15 seconds for EKV to reach eventual consistency. Please be patient.", end='', flush=True)
+
+for _ in range(15):  # Loop 15 times for 15 seconds
+    time.sleep(1)  # Wait for 1 second
+    print('.', end='', flush=True)  # Print a dot for each second waited, without moving to a new line
+
+print("\nDone waiting.")  # Move to a new line when done waiting
 
 
 requests.packages.urllib3.disable_warnings()
