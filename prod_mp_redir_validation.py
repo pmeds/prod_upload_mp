@@ -22,7 +22,7 @@ def process_row(row):
     destination = row['destination']
     host = row['hostname']
     fRedirect = 'https://' + host + destination
-    url = 'https://www.playstation.com' + source_data
+    url = 'https://paulm-sony.test.edgekey.net' + source_data
     headers = {"Accept": "text/html"}
 
     # Make the GET request, with allow_redirects set to false
@@ -40,7 +40,7 @@ def process_row(row):
 
 
 def main():
-    file_name = "test-delete3.xlsx"
+    file_name = "test-uploader2.xlsx"
     df = pd.read_excel(file_name, engine='openpyxl')
 
     # Define the number of threads
