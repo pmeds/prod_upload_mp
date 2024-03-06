@@ -25,7 +25,7 @@ chmod 754 prod_mp_redir_validation.py'''
         script {
           if (fileExists('mp-test-games-upload.csv')) {
             sh 'echo "uploading games rules"'
-            sh 'python3 prod_mp_upload_rules.py test-games-upload.csv'
+            sh 'python3 prod_mp_upload_rules.py mp-test-games-upload.csv'
           }
         }
 
