@@ -49,7 +49,7 @@ chmod 754 prod_mp_redir_validation.py'''
       steps {
         echo 'Testing the uploaded rules'
         script {
-          if (fileExists('test-delete3.xlsx')) {
+          if (fileExists('test-uploader2.xlsx')) {
             sh 'echo "testing uploaded rules"'
             sh 'python3 prod_mp_redir_validation.py'
           }
